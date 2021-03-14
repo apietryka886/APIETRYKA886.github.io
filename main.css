@@ -32,7 +32,7 @@
 
 .resume_about{
     grid-area: resume_about;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 20px;
     padding-left: 40px;
     padding-right: 40px;

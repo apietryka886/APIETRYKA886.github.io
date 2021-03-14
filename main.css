@@ -1,3 +1,114 @@
-p {
-    background-color: darkseagreen;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.resume{
+   border: 1px solid black;
+   
+    display: grid;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: minmax(min-content,330px) 1fr;
+    grid-template-areas:    
+    "resume_profile resume_name"
+    "resume_profile resume_about"
+    "resume_left    specialist_skills"
+    "resume_left    soft_skills"
+    "resume_left    resume_education"
+    "resume_left    resume_hobby"
+    "resume_left    footer"; 
+}
+
+.resume_name{
+    grid-area: resume_name;
+    font-weight: 700;
+    font-size: 50px;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+.resume_about{
+    grid-area: resume_about;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.resume_profile{
+    grid-area: resume_profile;
+    text-align: center;
+    background-color: rgb(223, 222, 222);
+    padding-top: 40px;
+}
+
+.resume_profile img{
+    border: 1px solid rgba(211, 211, 211, 0.692);  
+}
+
+.resume_left{
+    grid-area: resume_left;
+    background-color:rgb(223, 222, 222);
+    padding-top: 30px;
+}
+
+.resume_info{
+    padding-bottom: 10px;
+    padding-left: 72px ;
+}   
+
+.semi_bold{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.data{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.specialist_skills{
+    grid-area: specialist_skills;
+    padding-left: 40px;
+}
+
+.bol{
+    font-weight: 400;
+    font-size: 24px;
+    border-bottom: 4px solid rgb(223, 222, 222);;
+}
+
+ul{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.tekst{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.soft_skills{
+    grid-area: soft_skills;
+    padding-left: 40px;
+}
+
+.resume_education{
+    grid-area: resume_education;
+    padding-left: 40px;
+}
+
+.resume_hobby{
+    grid-area: resume_hobby;
+    padding-left: 40px;
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
 }

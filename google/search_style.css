@@ -1,0 +1,35 @@
+.mian_window{
+    visibility: hidden;
+}
+
+.results{
+    display: block;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+}
+.up_box{
+    clear: both;
+    min-width: 833px;
+    margin-left: 0;
+    padding-top: 20px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background: #fff;
+    color: #202124;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+}
+
+.results_google_space{
+    display: block;
+    height: 65px;
+}
+
+.google_space_items{
+    display: block;
+    margin-top: 0em;
+    width: 833px;
+    width: 1109px;
+}

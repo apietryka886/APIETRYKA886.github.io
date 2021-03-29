@@ -1,64 +1,87 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
+    <head >
         <meta charset="utf-8"/>
         <title>Google_Zadanie_TI</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="search_style.css">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     </head>
-    <body>
-        <div class="top"> 
-            <div class="top_box">
-                <div class="top_items">
-                    <a class="it_top" href="https://mail.google.com/mail/&ogbl">Gmail</a>
-                    <a class="it_top" href="https://www.google.pl/imghp?h1=pl&ogbl">Grafika</a>
-                    <div class="dots">
-                        <img class="dots_img" src="aplication_dots.jpg" alt="dots_aplication">
+    <body class="results">
+        <div class="main_window">
+            <div class="top"> 
+                <div class="top_box">
+                    <div class="top_items">
+                        <a class="it_top" href="https://mail.google.com/mail/&ogbl">Gmail</a>
+                        <a class="it_top" href="https://www.google.pl/imghp?h1=pl&ogbl">Grafika</a>
+                        <div class="dots">
+                            <img class="dots_img" src="aplication_dots.jpg" alt="dots_aplication">
+                        </div>
+                        <button class="blue_login" type="button">Zaloguj się</button>
                     </div>
-                    <button class="blue_login" type="button">Zaloguj się</button>
+                </div>
+            </div>
+            <div class="center">
+                <div class="logo_google">
+                    <img class="google" src="googlelogo_color_272x92dp.png" alt="logo_google_img">
+                </div>
+                <div class="search_space">
+                    <div class="search">
+                        <div class="search_in">
+                            <img class="loupe" src="loupe.png" alt="loupe_img">
+                            <input class="type_space" maxlenght="2048" type="text" title="Szukaj" value-aria-label="Szukaj">
+                            <img class="tia" src="tia.png" alt="tia_png">
+                        </div>
+                    </div>
+                    <div class="search_buttons">
+                        <div class="buttons">
+                            <button class="button_st" type="button">Szukaj w Google</button> 
+                            <button class="button_nd" type="button">Szczęśliwy traf</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="empty_space"></div>
+            <div class="bottom">
+                <div class="country">Polska</div>
+                <div class="other">
+                    <div class="line_2">
+                        <a class="other_tekst" href="https://about.google/?utm_source=google-PL&utm_medium=referral&utm_campaign=hp-footer&fg=1">O nas</a>
+                        <a class="other_tekst" href="https://www.google.com/intl/pl_pl/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Reklamuj się</a>
+                        <a class="other_tekst" href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Dla firm</a>
+                        <a class="other_tekst" href="https://google.com/search/howsearchworks/?fg=1">Jak działa wyszukiwarka</a>
+                    </div>
+                    <div class="line_1">
+                        <a class="extra" href="https://sustainability.google/intl/pl/commitments-europe/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">
+                            <img class="leaf" src="leaf.png" alt="carbon_neutrality_img">
+                            <span class="leaf_tekst">Neutralność węglowa od 2007 roku</span>
+                        </a>
+                    </div>
+                    <div class="line_3">
+                        <a class="other_tekst" href="https://policies.google.com/privacy?hl=pl&fg=1">Prywatność</a>
+                        <a class="other_tekst" href="https://policies.google.com/terms?hl=pl&fg=1">Warunki</a>
+                        <a class="other_tekst" href="https://pl.search.yahoo.com/search?fr=mcafee_uninternational&type=E211PL850G0&p=ustawienia+google">Ustawienia</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="center">
-            <div class="logo_google">
-                <img class="google" src="googlelogo_color_272x92dp.png" alt="logo_google_img">
-            </div>
-            <div class="search_space">
-                <div class="search">
-                    <div class="search_in">
-                        <img class="loupe" src="loupe.png" alt="loupe_img">
-                        <input class="type_space" maxlenght="2048" type="text" title="Szukaj" value-aria-label="Szukaj">
-                        <img class="tia" src="tia.png" alt="tia_png">
+        <div class="results">
+            <div class="results_google_space">
+                <div class="google_space_items">
+                    <div class="small_google">
+                        <img class="logo" src="googlelogo_color_272x92dp.png", alt="Google", height="30", width="92"> 
                     </div>
-                </div>
-                <div class="search_buttons">
-                    <div class="buttons">
-                        <button class="button_st" type="button">Szukaj w Google</button> 
-                        <button class="button_nd" type="button">Szczęśliwy traf</button>
+                    <div class="wyniki_wyszukiwania_box">
+                        <div class="wyniki_wyszukiwania">
+                            <div class="tekst_wyszukiwania">
+                                <input class="type_space" maxlenght="2048" type="text" title="Szukaj" value-aria-label="Jakiś wynik google">
+                                <img class="x_photo" src="x.png", alt="x_photo", height="44", width="24">
+                                <span class="kreska"></span>
+                                <img class="tia" src="tia.png" alt="tia_png">
+                                <img class="loupe" src="loupe_blue.png" alt="loupe_img", height="44", width="44">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="empty_space"></div>
-        <div class="bottom">
-            <div class="country">Polska</div>
-            <div class="other">
-                <div class="line_2">
-                    <a class="other_tekst" href="https://about.google/?utm_source=google-PL&utm_medium=referral&utm_campaign=hp-footer&fg=1">O nas</a>
-                    <a class="other_tekst" href="https://www.google.com/intl/pl_pl/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Reklamuj się</a>
-                    <a class="other_tekst" href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Dla firm</a>
-                    <a class="other_tekst" href="https://google.com/search/howsearchworks/?fg=1">Jak działa wyszukiwarka</a>
-                </div>
-                <div class="line_1">
-                    <a class="extra" href="https://sustainability.google/intl/pl/commitments-europe/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">
-                        <img class="leaf" src="leaf.png" alt="carbon_neutrality_img">
-                        <span class="leaf_tekst">Neutralność węglowa od 2007 roku</span>
-                    </a>
-                </div>
-                <div class="line_3">
-                    <a class="other_tekst" href="https://policies.google.com/privacy?hl=pl&fg=1">Prywatność</a>
-                    <a class="other_tekst" href="https://policies.google.com/terms?hl=pl&fg=1">Warunki</a>
-                    <a class="other_tekst" href="https://pl.search.yahoo.com/search?fr=mcafee_uninternational&type=E211PL850G0&p=ustawienia+google">Ustawienia</a>
                 </div>
             </div>
         </div>

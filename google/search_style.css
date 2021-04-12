@@ -1,13 +1,15 @@
-.results .main_window{
-    display:none;
+ .results .main_window{
+    display: none;
 }
 
-.results{
+ .results .kkk{
     display: block;
     font-family: arial,sans-serif;
     font-size: 14px;
+    height: 100%;
 }
-.results .results_google_space{
+
+.results .kkk{
     clear: both;
     min-width: 833px;
     margin-left: 0;
@@ -19,6 +21,7 @@
     background: #fff;
     color: #202124;
 }
+
 .results .first-line{
     display: flex;
     align-items: center;
@@ -328,7 +331,7 @@
     border-color: grey;
 }
 
-tbody{
+.results tbody{
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;

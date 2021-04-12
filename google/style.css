@@ -1,9 +1,12 @@
-html, body{
+html, body {
     height: 100%;
 }
 
-.results{
-    display:none;
+.kkk{
+    display: none;
+}
+.kkk .results_google_space{
+    display: none;
 }
 
 .main_window{
@@ -156,7 +159,7 @@ a{
     width: 20px
 }
 
-.type_space{
+.type_space {
     background-color: transparent;
     border: none;
     margin: 0;

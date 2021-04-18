@@ -1,15 +1,24 @@
- .results .main_window{
+.results .top{
     display: none;
 }
 
- .results .kkk{
+.results .center{
+    display: none;
+}
+
+.results .bottom{
+    display: none;
+}
+
+.results .all{
     display: block;
     font-family: arial,sans-serif;
     font-size: 14px;
     height: 100%;
+    width: 690px;
 }
 
-.results .kkk{
+.results .all{
     clear: both;
     min-width: 833px;
     margin-left: 0;
@@ -20,11 +29,14 @@
     margin: 0;
     background: #fff;
     color: #202124;
+    width: 1261px;
 }
+
 
 .results .first-line{
     display: flex;
     align-items: center;
+    width: 1261px;
 }
 
 .results .logo{
@@ -45,6 +57,7 @@
     height: 44px;
     margin-right: auto;
 }
+
 
 .results .search-text{
     background-color: transparent;
@@ -126,6 +139,7 @@
 .results .second-line{
     color: #70757a;
     font-size: 14px;
+    width: 690px;
     font-family: Google Sans,arial,sans-serif;
     height: 58px;
     padding: 0;
@@ -139,10 +153,12 @@
     display: flex;
     align-items: center;
 }
+
 .results .mark-text{
     margin-left: 184px;
     display: flex;
 }
+
 
 .results .styl{
     color: #5f6368;
@@ -151,8 +167,9 @@
     line-height: 16px;
     margin: 11px 1px 0;
 }
+
 .results .wszystko{
-    color: #1a73e8;
+    color: #1a73e8; 
     padding: 17px 12px 11px 10px;
     height: 16px;
     line-height: 16px;
@@ -211,6 +228,7 @@
    vertical-align: middle; 
 }
 
+
 .results .three-line{
     background: #fff;
     width: 100%;
@@ -233,6 +251,8 @@
 }
 
 .results .wyszukiwania{
+    display: flex;
+    flex-direction: column;
     position: relative;
     margin-right: 264px;
     margin-left: 180px;
@@ -341,7 +361,9 @@
     vertical-align: top;
 }
 
-.results footer{
+.results .last_line{
+    display: flex;
+    flex-direction: column;
     padding-top: 12px;
     background: #f2f2f2;
     line-height: 40px;

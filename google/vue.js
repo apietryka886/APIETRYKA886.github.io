@@ -1,16 +1,23 @@
-var myBody = document.getElementsByTagName('body')[0];
+var app = new Vue({
+    el: "#app",
+    data: {
+        googleSearch: "",
+    },
+    updated() {
 
-const input = document.querySelector('.type_space');
-input.addEventListener('change', updateValue);
-
-function updateValue(e) 
-{
-    if(e.target.value != '')
-    {
-        myBody.classList.toggle('results');
-    }
-    else
-    {
-        myBody.classList.remove('results');
-    }
-}
+        this.$nextTick(() => {
+        
+        if (this.googleSearch.length > 0) {
+        
+        this.$refs.second.focus();
+        
+        } else {
+        
+        this.$refs.first.focus();
+        
+        }
+        
+        });
+        
+        }
+});

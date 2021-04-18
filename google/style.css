@@ -2,14 +2,7 @@ html, body {
     height: 100%;
 }
 
-.kkk{
-    display: none;
-}
-.kkk .results_google_space{
-    display: none;
-}
-
-.main_window{
+.all {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -271,7 +264,7 @@ a{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.line_3{
+ .line_3{
     justify-content: flex-end;
     min-width: 30%;
     order: 3;
@@ -296,6 +289,25 @@ a{
     white-space: nowrap;
     text-decoration: none;
     color: #70757a;
+}
+.first-line{
+    display: none;
+}
+
+.second-line{
+    display: none;
+}
+
+.three-line{
+    display: none;
+}
+
+.wyszukiwania{
+    display: none;
+}
+
+.last_line {
+    display: none;
 }
 
 @media only screen and (max-width: 1200px){

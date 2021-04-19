@@ -120,6 +120,11 @@
             </div>
             <div class="three-line">
                 <div class="search-time">Około 8 340 000 wyników (0,43 s)</div>
+                <div class="cities">
+                   <ul v-for="city in filtredCities">
+                       {{ city.name }}
+                   </ul>
+                 </div>
             </div>
             <div class="wyszukiwania" id = "probuje">
                 <div class="w">
@@ -220,6 +225,7 @@
                 </div>
             </footer>     
         </div>
+        <script src="cities.js" defer></script>
         <script src="vue.js" defer></script>
     </body>
 </html>

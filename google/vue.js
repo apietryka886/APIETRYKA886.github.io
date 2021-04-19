@@ -2,6 +2,7 @@ var app = new Vue({
     el: "#app",
     data: {
         googleSearch: "",
+        cities: window.cities
     },
     updated() {
 
@@ -19,5 +20,14 @@ var app = new Vue({
         
         });
         
+    },
+    computed: {
+        filtredCities: function(){
+            let result = this.cities.filter(city => city.name.includes(this.googleSearch));
+            if(result.length > 10){
+                return result.slice(0, 10);
+            }
+            return result;
         }
+    }
 });

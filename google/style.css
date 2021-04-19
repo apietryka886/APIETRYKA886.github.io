@@ -180,6 +180,9 @@ a{
     padding-right: 20px;
 }
 
+.empty-space{
+    height: 165px;
+}
 .search_buttons{
     display: block;
     height: 70px;

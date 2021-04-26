@@ -9,7 +9,7 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     </head>
     <body>     
-        <div class="all" id="app" :class="{ results: googleSearch.length > 0 }" >  
+        <div class="all" id="app" :class="[ googleSearch.length != 0 && isActive == 1 ? 'results' : isActive = 0 ]" >  
             <div class="top"> 
                 <div class="top_box">
                     <div class="top_items">
@@ -30,9 +30,18 @@
                     <div class="search">
                         <div class="search_in">
                             <img class="loupe" src="loupe.png" alt="loupe_img">
-                            <input v-model ="googleSearch" class="type_space" type="text" maxlenght="2048"  title="Szukaj" ref ="first">
+                            <input v-model ="googleSearch" v-on:click="ustaw()" class="type_space" type="text" maxlenght="2048"  title="Szukaj" ref ="first">
                             <img class="tia" src="tia.png" alt="tia_png">
                         </div>
+                        <div class="space_under_search"></div>
+                            <div class="autocomplete" :class = "[googleSearch.length != 0 && filteredCities.length != 0 ? 'autocompleter' : 'bez']">
+                                <ul class = "miasta" >
+                                    <li class="pojedynczy" v-for="city in filteredCities" v-on:click="zmiana(city.name)" role="listbox">
+                                        <img class="loupe" src="loupe.png" alt="loupe_img">
+                                        <div class="kazdy" v-html="pogrubienie(city.name)"></div>
+                                    </li>
+                                </ul>
+                            </div>
                     </div>
                     <div class="search_buttons">
                         <div class="buttons">
@@ -68,7 +77,7 @@
             <div class="first-line">
                 <img class="logo" src="googlelogo_color_272x92dp.png" alt="Google" height="30" width="92">       
                 <div class="serch-space">
-                    <input v-model="googleSearch" type="text" class="search-text" maxlength="2048" title="Szukaj" value="jakiś wynik wyszukiwania" aria-label="Szukaj" ref="second">
+                    <input v-model="googleSearch" v-on:click="ustaw()" type="text" class="search-text" maxlength="2048" title="Szukaj" value="jakiś wynik wyszukiwania" aria-label="Szukaj" ref="second">
                     <div class="icons">
                         <img src="x.png" width="14" height="14" alt="cross photo" class="cross-item">
                         <span class="horizontal-line"></span>
@@ -121,11 +130,6 @@
             </div>
             <div class="three-line">
                 <div class="search-time">Około 8 340 000 wyników (0,43 s)</div>
-                <div class="cities">
-                   <ul v-for="city in filtredCities">
-                       {{ city.name }}
-                   </ul>
-                 </div>
             </div>
             <div class="wyszukiwania" id = "probuje">
                 <div class="w">

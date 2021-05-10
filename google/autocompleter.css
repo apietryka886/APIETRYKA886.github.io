@@ -1,0 +1,155 @@
+.search_space{
+    display: block;
+    width: auto;
+    max-width: 584px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 6px;
+    width: 484px;
+    width: auto;
+    max-width: 484px;
+    padding: 20px;
+}
+
+
+.search{
+    width: auto;
+    max-width: 584px;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    height: 44px;
+    margin: 0 auto;
+}
+
+.search_in{
+    flex: 1;
+    display: flex;
+    padding: 5px 8px 0 16px;
+    padding-left: 14px;
+}
+
+.loupe{
+    display: block;
+    display: flex;
+    align-items: center;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    margin-right: 8px;
+    height: 20px;
+    width: 20px
+}
+
+.type_space {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: -30px;
+    height: 34px;
+    max-width: 447px;
+    font-size: 16px;
+    align-self: flex-end;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.space_under_search{
+    border-top: 1px solid #e8eaed;
+    margin: 0 20px 0 14px;
+    padding-bottom: 4px;
+}
+
+
+/*
+.autocompleter.miasta{
+    background: #fff;
+    box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0 0 24px 24px;
+    padding-bottom: 4px;
+    overflow: hidden;
+    flex: auto;
+    padding-bottom: 8px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    
+}
+
+li{
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    padding: 0;
+    min-width: 460px;
+    font-family: arial,sans-serif;
+    padding: 6px 0 6px 20px;
+}
+----------------------------------------------------
+*/
+
+
+.autocompleter{
+    background: #fff;
+    box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0 0 24px 24px;
+    padding-bottom: 4px;
+    overflow: hidden;
+    flex: auto;
+    padding-bottom: 8px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+.miasta{
+    margin: 0;
+    font-size: 16px;
+    font-family: arial,sans-serif;
+    color: #212121;
+    list-style: none;
+    flex: auto;
+    padding: 0;
+}
+.kazdy{
+    align-items: center;
+    min-width: 0;
+    padding: 0;
+    font-family: arial,sans-serif;
+    padding: 6px 0 6px 20px;
+}
+.bez{
+    display: none;
+}
+.pojedynczy{
+    font-family: arial,sans-serif;
+    padding: 6px 0 6px 11px;
+    display: flex;
+    min-width: 460px;
+}
+.tia{
+    height: 14px;
+    vertical-align: middle;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    padding-right: 20px;
+}

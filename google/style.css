@@ -1,9 +1,9 @@
 html, body {
     height: 100%;
+    margin: 0px;
 }
 
 .all {
-    height: 100%;
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -109,6 +109,7 @@ a{
     width: 272px;
 }
 
+/*
 .search_space{
     display: block;
     width: auto;
@@ -178,6 +179,7 @@ a{
     margin: 0 20px 0 14px;
     padding-bottom: 4px;
 }
+*/
 
 /*
 .autocompleter.miasta{
@@ -208,8 +210,11 @@ li{
     min-width: 460px;
     font-family: arial,sans-serif;
     padding: 6px 0 6px 20px;
-}*/
+}
+----------------------------------------------------
+*/
 
+/*
 .autocompleter{
     background: #fff;
     box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
@@ -260,10 +265,8 @@ li{
     margin-bottom: 9px;
     padding-right: 20px;
 }
+*/
 
-.empty-space{
-    height: 165px;
-}
 .search_buttons{
     display: block;
     height: 70px;
@@ -318,7 +321,9 @@ li{
     flex-direction: column;
     justify-content: space-between;
     background: #f2f2f2;
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .country{

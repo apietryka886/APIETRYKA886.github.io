@@ -1,0 +1,37 @@
+#vue-app.results #box-to-change{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1261px;
+    height: 65px;
+    
+}
+
+#vue-app.results #menu{
+    order: 3;
+}
+
+#vue-app.results #google-logo{
+    order: -1;
+}
+
+#vue-app.results #search{
+    order: 2;
+}
+
+#vue-app.results .google{
+    height: 30px;
+    width: 92px;
+    padding: 0px 30px 0px 30px;
+}
+
+#vue-app.results input{
+    width: 440px;
+}
+
+#vue-app.results .gmail{
+    display: none;
+}
+
+#vue-app.results .graphic{
+    display: none;
+}

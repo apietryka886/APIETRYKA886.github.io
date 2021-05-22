@@ -31,13 +31,26 @@
                     <div class="search">
                         <div class="search_in">
                             <img class="loupe" src="loupe.png" alt="loupe_img">
-                            <input v-model ="googleSearch" v-on:click="ustaw()" class="type_space" type="text" maxlenght="2048"  title="Szukaj" ref ="first">
+                            <input 
+                                v-model ="googleSearch" 
+                                @keyup.down="goTo(activeResult + 1)"
+                                @keyup.up="goTo(activeResult - 1)"
+                                @keyup.enter="zmiana()"
+                                class="type_space" 
+                                type="text" 
+                                maxlenght="2048"  
+                                title="Szukaj" 
+                                ref ="first">
                             <img class="tia" src="tia.png" alt="tia_png">
                         </div>
                         <div class="space_under_search"></div>
                             <div class="autocomplete" :class = "[googleSearch.length != 0 && filteredCities.length != 0 ? 'autocompleter' : 'bez']">
                                 <ul class = "miasta" >
-                                    <li class="pojedynczy" v-for="city in filteredCities" v-on:click="zmiana(city.name)" role="listbox">
+                                    <li class="pojedynczy" 
+                                        v-for="(city, index) in filteredCities" 
+                                        :class="{active : autocompleterIsActive && activeResult === index}"
+                                        @click="zmiana(city.name)" 
+                                        role="listbox">
                                         <img class="loupe" src="loupe.png" alt="loupe_img">
                                         <div class="kazdy" v-html="pogrubienie(city.name)"></div>
                                     </li>
@@ -233,6 +246,5 @@
         </div>
         <script src="cities.js" defer></script>
         <script src="vue.js" defer></script>
-        <script src="autocompleter.js" defer></script>
     </body>
 </html>

@@ -1,0 +1,104 @@
+body{
+    width: 100%;
+}
+
+#box-to-change{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    color: #222;
+    background: #fff;
+    min-width: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.gmail{
+    padding-right: 20px;
+}
+
+.graphic{
+    padding-right: 20px;
+}
+
+.menu-dots{
+    max-height: 16px;
+    color: #5f6368;
+    padding-right: 20px;
+}
+
+#button-sign-in{
+    background: #4285f4;
+    background: #1a73e8;
+    color: #fff;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: .25px;
+    line-height: 16px;
+    min-width: 96px;
+    padding: 9px 23px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.google{
+    max-width: 272px ;
+    max-height: 92px;
+    width: 272px;
+    padding-bottom: 20px;
+}
+
+#search{
+    width: 100%;
+    height: 44px;
+    max-width: 584px;
+    min-width: 492px;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.loupe{
+    height: 20px;
+    width: 20px;
+    align-self: center;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    height: 34px;
+    width: 484px;
+    font-size: 16px;
+}
+
+.tia{
+    height: 14px;
+    width: auto;
+    margin-left: 10px;
+    align-self: center;
+}

@@ -153,3 +153,8 @@ li{
     margin-bottom: 9px;
     padding-right: 20px;
 }
+
+.autocomplete .miasta .pojedynczy .active{
+    background-color: gray;
+    z-index: 1;
+}

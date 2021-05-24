@@ -2,6 +2,14 @@ var app = new Vue({
     el: "#app",
     data: {
         googleSearch: '',
+    }
+});
+
+/* PRZED WYŁĄCZENIEM KODU DO AUTOCOMPLETERA */
+/*var app = new Vue({
+    el: "#app",
+    data: {
+        googleSearch: '',
         cities: window.cities,
         isActive: 0,
         autocompleterIsActive: false,
@@ -71,4 +79,4 @@ var app = new Vue({
             this.googleSearch = this.filteredCities[index].name;
         }
     }
-});
+});*/

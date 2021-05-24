@@ -28,7 +28,13 @@
                     <img class="google" src="googlelogo_color_272x92dp.png" alt="logo_google_img">
                 </div>
                 <div class="search_space">
-                    <div class="search">
+                    <v-autocompleter 
+                        :value = "googleSearch"
+                        :options="cities"
+                        @input="googleSearch = $event"
+                        @enter="zmien(city.name)">
+                    </v-autocompleter>
+                    <!-- <div class="search">
                         <div class="search_in">
                             <img class="loupe" src="loupe.png" alt="loupe_img">
                             <input 
@@ -57,7 +63,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="search_buttons">
                         <div class="buttons">
                             <button class="button_st" type="button">Szukaj w Google</button> 
@@ -65,7 +71,7 @@
                         </div>
                     </div>
                     <div class="empty-space"></div>   
-            </div>
+                </div>
             <div class="bottom">
                 <div class="country">Polska</div>
                 <div class="other">
@@ -245,6 +251,7 @@
             </footer>     
         </div>
         <script src="cities.js" defer></script>
+        <script src="autocompleter.js" defer></script>
         <script src="vue.js" defer></script>
     </body>
 </html>

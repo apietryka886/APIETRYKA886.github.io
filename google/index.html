@@ -28,12 +28,14 @@
                 <div class="logo_google">
                     <img class="google" src="googlelogo_color_272x92dp.png" alt="logo_google_img">
                 </div>
+                googleSearch: {{ googleSearch }}
                 <div class="search_space">
                     <v-autocompleter 
                         :value = "googleSearch"
                         :options="cities"
+                        ref="first"
                         @input="googleSearch = $event"
-                        @enter="zmien(city.name)">
+                        @enter="zmien">
                     </v-autocompleter>
                     <!-- <div class="search">
                         <div class="search_in">
@@ -73,6 +75,7 @@
                     </div>
                     <div class="empty-space"></div>   
                 </div>
+            </div>
             <div class="bottom">
                 <div class="country">Polska</div>
                 <div class="other">
@@ -98,7 +101,15 @@
             <div class="first-line">
                 <img class="logo" src="googlelogo_color_272x92dp.png" alt="Google" height="30" width="92">       
                 <div class="serch-space">
-                    <input v-model="googleSearch" v-on:click="ustaw()" type="text" class="search-text" maxlength="2048" title="Szukaj" value="jakiś wynik wyszukiwania" aria-label="Szukaj" ref="second">
+                    <v-autocompleter 
+                        :value = "googleSearch"
+                        :options="cities"
+                        @input="googleSearch = $event"
+                        @enter="zmien"
+                        ref="second"
+                        >
+                    </v-autocompleter>
+                    <!-- <input v-model="googleSearch" v-on:click="ustaw()" type="text" class="search-text" maxlength="2048" title="Szukaj" value="jakiś wynik wyszukiwania" aria-label="Szukaj" ref="second"> -->
                     <div class="icons">
                         <img src="x.png" width="14" height="14" alt="cross photo" class="cross-item">
                         <span class="horizontal-line"></span>
@@ -251,8 +262,8 @@
                 </div>
             </footer>     
         </div>
-        <script src="cities.js" defer></script>
-        <script src="autocompleter.js" defer></script>
-        <script src="vue.js" defer></script>
+        <script src="cities.js"></script>
+        <script src="autocompleter.js"></script>
+        <script src="vue.js"></script>
     </body>
 </html>

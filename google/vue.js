@@ -2,7 +2,24 @@ var app = new Vue({
     el: "#app",
     data: {
         googleSearch: '',
-    }
+        isActive: false,
+        cities: window.cities,
+    },
+    methods : {
+        zmien(name) {
+            this.googleSearch = name;
+            this.isActive =  true;
+        }
+    },
+    updated() {
+        // this.$nextTick(() => {
+        //     if (this.googleSearch.length > 0) {        
+        //         this.$refs.second.focus();
+        //     } else {
+        //         this.$refs.first.focus();
+        //     }
+        // });
+    },
 });
 
 /* PRZED WYŁĄCZENIEM KODU DO AUTOCOMPLETERA */

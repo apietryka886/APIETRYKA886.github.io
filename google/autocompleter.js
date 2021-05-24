@@ -1,7 +1,6 @@
 Vue.component("v-autocompleter",{
     data(){
         return{
-            googleSearch: '',
             cities: window.cities,
             isActive: 0,
             autocompleterIsActive: false,
@@ -31,21 +30,24 @@ Vue.component("v-autocompleter",{
                 :value="value" 
                 @keyup.down="goTo(activeResult + 1)"
                 @keyup.up="goTo(activeResult - 1)"
-                @input="$emit('input', $event.target.value)"
-                @keyup.enter="$emit('enter')"
+                @input="metodaInput($event)"
+                @keyup.enter="$emit('enter', value)"
                 class="type_space" 
                 type="text" 
                 maxlenght="2048"  
-                title="Szukaj" 
+                title="Szukaj"
                 ref ="first"/>
             <img class="tia" src="tia.png" alt="tia_png">
         </div>
         <div class="space_under_search"></div>
-            <div class="autocomplete" :class = "[googleSearch.length != 0 && filteredCities.length != 0 ? 'autocompleter' : 'bez']">
+            <div class="autocomplete" :class = "[value.length != 0 && filteredCities.length != 0 ? 'autocompleter' : 'bez']">
                 <ul class = "miasta" >
                     <li class="pojedynczy" 
                         v-for="(city, index) in filteredCities" 
                         :class="{active : autocompleterIsActive && activeResult === index}"
+                        
+                        @click="$emit('enter', city.name)"
+                        
                         role="listbox">
                         <img class="loupe" src="loupe.png" alt="loupe_img">
                         <div class="kazdy" v-html="pogrubienie(city.name)"></div>
@@ -54,28 +56,19 @@ Vue.component("v-autocompleter",{
             </div>
         </div>
     </div>`,
-    updated() {
-        this.$nextTick(() => {
-        if (this.googleSearch.length > 0) {        
-        this.$refs.second.focus();
-        } else {
-        this.$refs.first.focus();
-        }
-        });
-    },
     watch:{
-        googleSearch(){
+        value(){
             if(this.autocompleterIsActive){
                 return;
             }
-            if(this.googleSearch.length === 0){
+            if(this.value.length === 0){
                 filteredCities = [];
                 return;
             }
             let returnedCities = [];
 
             this.cities.forEach((cityData) =>{
-                if(returnedCities.length === 10 || !cityData.name.includes(this.googleSearch)){
+                if(returnedCities.length === 10 || !cityData.name.includes(this.value)){
                     return;
                 }
                 returnedCities.push({
@@ -84,17 +77,19 @@ Vue.component("v-autocompleter",{
             });
 
             this.filteredCities = returnedCities;
-
         }
     },
     methods:{
+        metodaInput(event) {
+            this.$emit('input', event.target.value);
+        },
         zmiana: function(a)
         {
             this.isActive = 1;
         },
         pogrubienie: function(a)
         {
-            wyszukaj = this.googleSearch;
+            wyszukaj = this.value;
             var pom = a.split(wyszukaj);
             for(i = 0; i < pom.length; i++)
             {
@@ -114,7 +109,8 @@ Vue.component("v-autocompleter",{
 
             this.autocompleterIsActive = true;
             this.activeResult = index;
-            this.googleSearch = this.filteredCities[index].name;
+            this.$emit('input', this.filteredCities[index].name);
+            // this.value = this.filteredCities[index].name;
         },
         enter(){
             this.$emit(my-enter)

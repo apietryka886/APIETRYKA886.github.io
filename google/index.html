@@ -28,7 +28,6 @@
                 <div class="logo_google">
                     <img class="google" src="googlelogo_color_272x92dp.png" alt="logo_google_img">
                 </div>
-                googleSearch: {{ googleSearch }}
                 <div class="search_space">
                     <v-autocompleter 
                         :value = "googleSearch"
@@ -37,36 +36,6 @@
                         @input="googleSearch = $event"
                         @enter="zmien">
                     </v-autocompleter>
-                    <!-- <div class="search">
-                        <div class="search_in">
-                            <img class="loupe" src="loupe.png" alt="loupe_img">
-                            <input 
-                                v-model ="googleSearch" 
-                                @keyup.down="goTo(activeResult + 1)"
-                                @keyup.up="goTo(activeResult - 1)"
-                                @keyup.enter="zmiana()"
-                                class="type_space" 
-                                type="text" 
-                                maxlenght="2048"  
-                                title="Szukaj" 
-                                ref ="first">
-                            <img class="tia" src="tia.png" alt="tia_png">
-                        </div>
-                        <div class="space_under_search"></div>
-                            <div class="autocomplete" :class = "[googleSearch.length != 0 && filteredCities.length != 0 ? 'autocompleter' : 'bez']">
-                                <ul class = "miasta" >
-                                    <li class="pojedynczy" 
-                                        v-for="(city, index) in filteredCities" 
-                                        :class="{active : autocompleterIsActive && activeResult === index}"
-                                        @click="zmiana(city.name)" 
-                                        role="listbox">
-                                        <img class="loupe" src="loupe.png" alt="loupe_img">
-                                        <div class="kazdy" v-html="pogrubienie(city.name)"></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="search_buttons">
                         <div class="buttons">
                             <button class="button_st" type="button">Szukaj w Google</button> 

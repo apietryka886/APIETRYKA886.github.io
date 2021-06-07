@@ -9,6 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <script src="https://unpkg.com/vue"></script>
+        <script src="https://cdnjs.com/libraries/jquery-throttle-debounce"></script>
     </head>
     <body>     
         <div class="all" id="app" :class="[ googleSearch.length != 0 && isActive == 1 ? 'results' : isActive = 0 ]" >  
@@ -30,7 +31,7 @@
                 </div>
                 <div class="search_space">
                     <v-autocompleter 
-                        :value = "googleSearch"
+                        v-model = "googleSearch"
                         :options="cities"
                         ref="first"
                         @input="googleSearch = $event"
@@ -231,7 +232,6 @@
                 </div>
             </footer>     
         </div>
-        <script src="cities.js"></script>
         <script src="autocompleter.js"></script>
         <script src="vue.js"></script>
     </body>

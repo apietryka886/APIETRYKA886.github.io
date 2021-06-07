@@ -27,11 +27,10 @@ Vue.component("v-autocompleter",{
         <div class="search_in">
             <img class="loupe" src="loupe.png" alt="loupe_img">
             <input 
-                :value="value" 
                 @keyup.down="goTo(activeResult + 1)"
                 @keyup.up="goTo(activeResult - 1)"
-                @input="metodaInput($event)"
-                @keyup.enter="$emit('enter', value)"
+                @input="findResultsDebounced"
+                @keyup.enter="$emit('enter', googleSearch)"
                 class="type_space" 
                 type="text" 
                 maxlenght="2048"  
@@ -40,7 +39,7 @@ Vue.component("v-autocompleter",{
             <img class="tia" src="tia.png" alt="tia_png">
         </div>
         <div class="space_under_search"></div>
-            <div class="autocomplete" :class = "[value.length != 0 && filteredCities.length != 0 ? 'autocompleter' : 'bez']">
+            <div class="autocomplete" :class = "[googleSearch.length != 0 && filteredCities.length != 0 ? 'autocompleter' : 'bez']">
                 <ul class = "miasta" >
                     <li class="pojedynczy" 
                         v-for="(city, index) in filteredCities" 
@@ -56,7 +55,7 @@ Vue.component("v-autocompleter",{
             </div>
         </div>
     </div>`,
-    watch:{
+    /*watch:{
         value(){
             if(this.autocompleterIsActive){
                 return;
@@ -78,10 +77,19 @@ Vue.component("v-autocompleter",{
 
             this.filteredCities = returnedCities;
         }
-    },
+    },*/
     methods:{
+        findResultsDebounced : Cowboy.debounce(100, function findResultsDebounced() {
+            console.log('Fetch: ', this.googleSearch)
+            fetch(`http://localhost:8080/apietryka886.github.io/google/search.php?name=` + this.googleSearch)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Data: ', data);
+                    this.filteredCities = data;
+                });
+        }),
         metodaInput(event) {
-            this.$emit('input', event.target.value);
+            this.$emit('input', event.target.googleSearch);
         },
         zmiana: function(a)
         {
@@ -89,7 +97,7 @@ Vue.component("v-autocompleter",{
         },
         pogrubienie: function(a)
         {
-            wyszukaj = this.value;
+            wyszukaj = this.googleSearch;
             var pom = a.split(wyszukaj);
             for(i = 0; i < pom.length; i++)
             {

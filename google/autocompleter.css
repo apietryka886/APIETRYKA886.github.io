@@ -158,3 +158,15 @@ li{
     background-color: gray;
     z-index: 1;
 }
+
+.results .autocompleter{
+    display: none;
+}
+
+.results .search_in{
+    display: none;
+}
+
+.results .v-autocompleter{
+    display: none;
+}
